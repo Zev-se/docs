@@ -32,8 +32,6 @@ Unit tests provide automated software testing during your development and publis
    The project template creates a UnitTest1.cs file with the following code:
 
    ```csharp
-   using Microsoft.VisualStudio.TestTools.UnitTesting;
-
    namespace StringLibraryTest
    {
        [TestClass]
@@ -46,6 +44,12 @@ Unit tests provide automated software testing during your development and publis
        }
    }
    ```
+   
+   And a Usings.cs file with the following code:
+   
+   ```csharp
+   using Microsoft.VisualStudio.TestTools.UnitTesting;
+   ```
 
    The source code created by the unit test template does the following:
 
@@ -54,6 +58,8 @@ Unit tests provide automated software testing during your development and publis
    - It applies the <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> attribute to define `TestMethod1`.
 
    Each method tagged with [[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) in a test class tagged with [[TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) is run automatically when the unit test is invoked.
+   
+   Please note, of you get errors on your TestClass, TestMethod and in your Usings.cs file you have probably not installed the MSTest.TestFramework. Please do this via the terminal: `dotnet add package MSTest.TestFramework`.
 
 1. Add the test project to the solution.
 
